@@ -28,7 +28,7 @@ class DUKEDataset(Dataset):
     def get_data_files(self):
         subfolder_names = os.listdir(self.root_dir)
         folder_names = [os.path.join(
-            self.root_dir, subfolder, 'Dyn_0.nii.gz') for subfolder in subfolder_names]
+            self.root_dir, subfolder, 'Dyn_0.nii') for subfolder in subfolder_names]
         return folder_names
 
     def __len__(self):
