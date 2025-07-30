@@ -20,10 +20,10 @@ class BRATSDataset(Dataset):
         self.severity = severity
         if self.train:
             self.root = os.path.join(
-                root_dir, 'MICCAI_BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/')
+                root_dir, 'BraTS2020_TrainingData/MICCAI_BraTS2020_TrainingData/')
         else:
             self.root = os.path.join(
-                root_dir, 'MICCAI_BraTS2020_ValidationData/MICCAI_BraTS2020_ValidationData')
+                root_dir, 'BraTS2020_ValidationData/MICCAI_BraTS2020_ValidationData')
         self.imgtype = imgtype
         self.is_flip = is_flip
         self.dataset = self.get_dataset()
