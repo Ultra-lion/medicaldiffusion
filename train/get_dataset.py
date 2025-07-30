@@ -13,9 +13,9 @@ def get_dataset(cfg):
         return train_dataset, val_dataset, sampler
     if cfg.dataset.name == 'BRATS':
         train_dataset = BRATSDataset(
-            root_dir=cfg.dataset.root_dir, imgtype=cfg.dataset.imgtype, train=True, severity=cfg.dataset.severity, resize=cfg.dataset.resize)
+            root_dir=cfg.dataset.root_dir, imgtype=cfg.dataset.imgtype, train=True, severity=cfg.dataset.severity)
         val_dataset = BRATSDataset(
-            root_dir=cfg.dataset.root_dir, imgtype=cfg.dataset.imgtype, train=True, severity=cfg.dataset.severity, resize=cfg.dataset.resize)
+            root_dir=cfg.dataset.root_dir, imgtype=cfg.dataset.imgtype, train=True, severity=cfg.dataset.severity)
         sampler = None
         return train_dataset, val_dataset, sampler
     if cfg.dataset.name == 'ADNI':
